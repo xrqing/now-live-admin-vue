@@ -8,7 +8,7 @@
       <el-form-item label="密码">
         <el-input v-model="formdata.password" placeholder="请输入密码" show-password></el-input>
       </el-form-item>
-      <el-button type="primary" class="login-btn">登录</el-button>
+      <el-button type="primary" @click.prevent = "handleLogin()" class="login-btn">登录</el-button>
     </el-form>
   </div>
 </template>
@@ -21,6 +21,13 @@ export default {
         username: '',
         password: ''
       }
+    }
+  },
+  methods: {
+    handleLogin () {
+      this.$http.post('admin/login1', this.formdata).then(res => {
+        console.log(res)
+      })
     }
   }
 }

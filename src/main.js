@@ -3,12 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import ElementUI from 'element-ui'
+import MyServerHttp from '@/plugins/http.js'
+
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/reset.css'
 
 import router from './router'
 
 Vue.use(ElementUI)
+Vue.use(MyServerHttp)
 
 /* 使用vue插件 */
 Vue.config.productionTip = false
