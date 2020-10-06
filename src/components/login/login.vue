@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     handleLogin () {
-      this.$http.post('admin/login1', this.formdata).then(res => {
+      this.$http.post('/login', this.formdata).then(res => {
         console.log(res)
       })
     }
